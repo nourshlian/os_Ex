@@ -38,11 +38,11 @@ void sigchather(int signum){ // children signal handler
 
     printf("PID %d caught one\n",getpid());
        
-       for (int i = 4; i > 1; i++){
+       for (int i = 4; i > 1; i--){
 
-         if(getpid() == zombies[i])
-            kill(zombies[i+1],2);
-         
+         if(getpid() == zombies[i]){
+            kill(zombies[i-1],2);
+         }
        }
        
     if(getpid() == zombies[1]) 
