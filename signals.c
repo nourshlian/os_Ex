@@ -89,7 +89,8 @@ if(getpid() == zombies[0]){
   
     sleep(1);
     kill(zombies[4],2);
-    pause();
+    for(int i=0 ; i < 5 ; i++)
+       pause();
    
 }
 
